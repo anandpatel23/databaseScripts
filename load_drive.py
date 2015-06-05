@@ -58,7 +58,8 @@ def save_items_in_db(items, LoadId):
                 continue
             cur.execute("""INSERT INTO
                         CIR.DriveItem
-                        (DriveSource, DriveFileName, Component_Name, Filepath, FileDate, DriveVersion, Company_Name, Copyright, LoadId)
+                        (DriveSource, DriveFileName, Component_Name, Filepath, FileDate, DriveVersion, Company_Name, 
+                        Copyright, LoadId)
                         VALUES
                         (?, ?, ?, ?, ?, ?, ?, ?, ?)""", "KDrive", item['filename'], item['componentName'], item['filepath'], 
                         item['fileDate'],item['version'], item['companyName'],item['copyright'], LoadId)

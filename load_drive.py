@@ -60,7 +60,8 @@ def save_items_in_db(items, LoadId):
                         CIR.DriveItem
                         (DriveSource, DriveFileName, Component_Name, Filepath, FileDate, DriveVersion, Company_Name, Copyright, LoadId)
                         VALUES
-                        (?, ?, ?, ?, ?, ?, ?, ?, ?)""", "KDrive", item['filename'], item['componentName'], item['filepath'], item['fileDate'],item['version'], item['companyName'],item['copyright'], LoadId)
+                        (?, ?, ?, ?, ?, ?, ?, ?, ?)""", "KDrive", item['filename'], item['componentName'], item['filepath'], 
+                        item['fileDate'],item['version'], item['companyName'],item['copyright'], LoadId)
         print
         cur.commit()
     except:
